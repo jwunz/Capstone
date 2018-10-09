@@ -1,32 +1,162 @@
-.App {
-  text-align: center;
+*{
+  border: 1px solid black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+html{
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+header{
+  width: 100%;
+}
+
+#root{
+  height: 100%;
+}
+
+.appContainer{
+  height: 100%;
+}
+
+.appHeader{
+  display: flex;
+  flex-direction: row;
+  width: 66%;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.leftHeaderContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo{
+  max-width: 50px;
+  max-height: 50px;
+  /* justify-self: flex-start; */
+}
+
+.signInWidget{
+  /* justify-self: flex-end; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+}
+
+.bodyContent{
+  width: 66%;
+  height: 100%;
+  margin: auto;
+}
+
+.signUpBody{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.signUpForm{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pageBody{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pageContent{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.newPostContainer{
+  margin: 10px;
+}
+
+.newPostForm{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.newPostInput{
+  flex-grow: 1;
+}
+
+.postContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.postHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.chatContent{
+  justify-content: flex-end;
+}
+
+.chatArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.messageContainer{
+  margin: 10px;
+}
+
+.messageBody{
+  padding: 7px;
+  margin: 0px 15px;
+}
+
+.messageForm{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.messageInput{
+  flex-grow: 1;
+}
+
+.sidePanel{
+  display: flex;
+  flex-direction: column;
+}
+
+.friendsContent{
+  display: flex;
+  flex-direction: column;
+}
+
+.clubsContent{
+  display: flex;
+  flex-direction: column;
+}
+
+.chatRoomsContent{
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeading{
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
 }
