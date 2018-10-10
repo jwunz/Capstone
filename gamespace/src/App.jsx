@@ -15,7 +15,7 @@ class App extends React.Component {
           </div>
         </header>
         <div className="bodyContent">
-          <UserPage />
+          <SearchPage />
         </div>
       </div>
     );
@@ -92,6 +92,54 @@ class HomePage extends React.Component {
   }
 }
 
+class UserPage extends React.Component {
+  render() {
+    return (
+      <div className="pageBody userBody">
+        <SidePanelWidget />
+        <div className="pageContent userContent">
+          <div className="userInfo">
+            <img src="FairyPenguin.jpg" className="userPic"></img>
+            <div className="userPageNameAndButtons">
+              <h2 className="userPageName">Username</h2>
+              <div className="userPageButtons">
+                <button className="userPageButton chatButton">Chat</button>
+                <button className="userPageButton friendUnfriendButton">Friend</button>
+              </div>
+            </div>
+            <div className="otherUserInfo">Any other user info will go over here.</div>
+          </div>
+          <div className="userPosts"></div>
+        </div>
+      </div>
+    )
+  }
+}
+
+class ClubPage extends React.Component {
+  render() {
+    return (
+      <div className="pageBody clubBody">
+        <SidePanelWidget />
+        <div className="pageContent clubContent">
+          <div className="clubInfo">
+            <img src="FairyPenguin.jpg" className="clubPic"></img>
+            <div className="clubPageNameAndButtons">
+              <h2 className="clubPageName">Username</h2>
+              <div className="clubPageButtons">
+                <button className="clubPageButton chatButton">Chat</button>
+                <button className="clubPageButton joinLeaveButton">Friend</button>
+              </div>
+            </div>
+            <div className="otherUserInfo">Any other user info will go over here.</div>
+          </div>
+          <div className="userPosts"></div>
+        </div>
+      </div>
+    )
+  }
+}
+
 class NewPostWidget extends React.Component {
   render() {
     return (
@@ -155,7 +203,21 @@ class SearchPage extends React.Component {
       <div className="pageBody searchBody">
         <SidePanelWidget />
         <div className="pageContent searchContent">
-          
+          <SearchElement />
+        </div>
+      </div>
+    )
+  }
+}
+
+class SearchElement extends React.Component {
+  render() {
+    return (
+      <div className="searchResult">
+        <img src="FairyPenguin.jpg" className="searchResultPic"></img>
+        <div className="nameAndInfo">
+          <h3 className="searchResultName">Username</h3>
+          <div className="searchResultInfo">Other info goes here.</div>
         </div>
       </div>
     )

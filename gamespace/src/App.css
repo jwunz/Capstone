@@ -135,6 +135,59 @@ header{
   flex-grow: 1;
 }
 
+.userInfo{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.userPic{
+  max-height: 150px;
+  margin: 10px;
+}
+
+.userPageButtons{
+  display: flex;
+  flex-direction: row;
+}
+
+.userPageButton{
+  margin: 10px;
+}
+
+.clubInfo{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.clubPic{
+  max-height: 150px;
+  margin: 10px;
+}
+
+.clubPageButtons{
+  display: flex;
+  flex-direction: row;
+}
+
+.clubPageButton{
+  margin: 10px;
+}
+
+.searchResult{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px;
+}
+
+.searchResultPic{
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px;
+}
+
 .sidePanel{
   display: flex;
   flex-direction: column;
