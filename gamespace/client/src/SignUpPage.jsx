@@ -1,6 +1,37 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addUser } from './actions/userActions';
 
 class SignUpPage extends React.Component {
+  state = {
+    username: '',
+    password: '',
+    password2: '',
+    email: '',
+    dob: ''
+  }
+
+  onChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  onSubmit = (e) => {
+    e.preventDefault();
+
+    const newUser = {
+      email: this.state.email,
+      username: this.state.username,
+      password: this.state.password,
+      dob: this.state.dob
+    };
+
+    console.log(newUser);
+
+    this.props.addUser(newUser);
+  }
+
   render() {
     return (
       <div>
@@ -8,15 +39,15 @@ class SignUpPage extends React.Component {
         <div className="signUpBody">
           <div>
             <form className="signUpForm">
-              <input type="text" placeholder="Email"></input>
-              <input type="text" placeholder="Desired Username"></input>
-              <input type="password" placeholder="Password"></input>
-              <input type="password" placeholder="Confirm Password"></input>
+              <input type="text"  name="email" onChange={this.onChange} placeholder="Email"></input>
+              <input type="text"  name="username" onChange={this.onChange} placeholder="Desired Username"></input>
+              <input type="password"  name="password" onChange={this.onChange} placeholder="Password"></input>
+              <input type="password"  name="password2" onChange={this.onChange} placeholder="Confirm Password"></input>
               <div>
                 <div>Date of Birth</div>
-                <input type="date"></input>
+                <input type="date" name="dob" onChange={this.onChange} ></input>
               </div>
-              <input type="submit" value="Sign Up!"></input>
+              <input type="button" value="Sign Up!" onClick={this.onSubmit} ></input>
             </form>
           </div>
           <div>
@@ -33,4 +64,11 @@ class SignUpPage extends React.Component {
   }
 }
 
-export default SignUpPage;
+const mapStateToProps = state => ({
+  email: state.email,
+  username: state.username,
+  password: state.password,
+  dob: state.dob
+})
+
+export default connect(mapStateToProps, { addUser })(SignUpPage);

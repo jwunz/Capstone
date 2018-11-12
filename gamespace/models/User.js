@@ -26,6 +26,14 @@ const userSchema = new Schema({
     dob: {
         type: Date,
         required: true
+    },
+    friends: {
+        type: Array,
+        default: []
+    },
+    role: {
+        type: Number,
+        default: 0
     }
 });
 

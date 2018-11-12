@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
+import SidePanelWidget from './SidePanelWidget.jsx';
+
 class UserPage extends React.Component {
   render() {
     return (
@@ -11,7 +15,9 @@ class UserPage extends React.Component {
             <div className="userPageNameAndButtons">
               <h2 className="userPageName">Username</h2>
               <div className="userPageButtons">
-                <button className="userPageButton chatButton">Chat</button>
+                <Link to='/chat'>
+                  <button className="userPageButton chatButton">Chat</button>
+                </Link>
                 <button className="userPageButton friendUnfriendButton">Friend</button>
               </div>
             </div>
